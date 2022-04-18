@@ -10,11 +10,11 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => <Terminal {...args} />;
 
-const Dark = Template.bind();
+const Python = Template.bind();
 
-const Light = Template.bind();
+const JavaScript = Template.bind();
 
-export { Light, Dark };
+export { Python, JavaScript };
 
 const project = {
     description: 'test project',
@@ -24,12 +24,12 @@ const project = {
     name: 'test',
 }
 
-Dark.args = {
+Python.args = {
   theme: 'dark',
   project: project,
 };
 
-Light.args = {
+JavaScript.args = {
   theme: 'light',
-  project: project,
+  project: { ...project, language: 'JavaScript'},
 }
