@@ -25,6 +25,8 @@ const LINKS = {
     ]
 }
 
+const GITHUB_LINK = 'https://github.com/devmegan';
+
 const HERO_CONTENT = {
     header: <>Hi, I'm <strong>Megan</strong>. A Web Developer with:</>,
     list: [
@@ -34,4 +36,4 @@ const HERO_CONTENT = {
     ],
     CTA: <>Want to see what tech I enjoy working with? Check out my <a className="link link-hover font-semibold underline text-secondary hover:text-secondary-focus" href="https://github.com/devmegan/awesome" target="_blank" rel="noreferrer">awesome list</a>. 😎</>
 }
-export { LINKS, HERO_CONTENT };
+export { LINKS, HERO_CONTENT, GITHUB_LINK };
