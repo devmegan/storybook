@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { GITHUB_LINK } from "../Config";
+import CTAbtn from "./LinkBtn";
 import Terminal from "./Terminal";
 
 export default function Repos(){
@@ -28,6 +30,15 @@ export default function Repos(){
                 {projects.slice(0,9).map((project) =>
                     <Terminal project={project} key={project.name} />
                 )}
+            </div>
+            <div className="text-center mt-6">
+                <CTAbtn 
+                    chevron={true} 
+                    href={GITHUB_LINK} 
+                    rel="noreferrer"
+                    target="_blank" 
+                    text="View all" 
+                />
             </div>
         </div>
     )
