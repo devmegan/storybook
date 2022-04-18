@@ -1,7 +1,7 @@
 export default function Hero({ content, theme }) {
     return (
         <div 
-            className="bg-base p-4 text-xl"
+            className="p-4 pb-10 text-xl rounded-right-clip bg-base-100"
             data-theme={theme}
         >
             <div className="grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-3">
