@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Terminal from "./Terminal";
 
 export default function Repos(){
     const [projects, setProjects] = useState(null)
@@ -10,17 +11,24 @@ export default function Repos(){
     if (!projects){
         return null;
     }
+    
     return (
-        <div className="p-4 bg-base-100 text-center">
-           {projects.map((project) =>
-                <a 
-                    className="link block"
-                    href={project.html_url}
-                    key={project.name}
-                    rel="noreferrer"
-                    target="_blank"
-                >{project.name}</a>
-           )}
+        <div className="p-4 text-lg">
+            <div className="sm:hidden grid grid-cols-1 gap-6">
+                {projects.slice(0,4).map((project) =>
+                    <Terminal project={project} key={project.name} />
+                )}
+            </div>
+            <div className="hidden sm:grid lg:hidden grid-cols-2 gap-6">
+                {projects.slice(0,6).map((project) =>
+                    <Terminal project={project} key={project.name} />
+                )}
+            </div>
+            <div className="hidden lg:grid grid-cols-3 gap-6">
+                {projects.slice(0,9).map((project) =>
+                    <Terminal project={project} key={project.name} />
+                )}
+            </div>
         </div>
     )
 }
