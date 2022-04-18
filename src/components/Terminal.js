@@ -1,4 +1,4 @@
-import LanguageColours from '../LangaugeColours.json';
+import { LANGUAGE_COLOURS } from "../LangaugeColours";
 
 export default function Terminal({ project }) {
     return (
@@ -20,7 +20,7 @@ export default function Terminal({ project }) {
                 <code 
                     className={`
                         text-base 
-                        ${LanguageColours[project.language] ?? 'text-[#e44b23]'}
+                        ${LANGUAGE_COLOURS[project.language] ?? 'text-[#e44b23]'}
                     `}>
                         {project.language ?? 'XML'}
                     </code>
