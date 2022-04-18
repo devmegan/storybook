@@ -1,4 +1,5 @@
-import { LINKS, LOGO } from "../../Config"
+import { LINKS } from "../../Config";
+import LOGO from "../assets/img/logo.png";
 
 export default function Footer({ theme }){
     return (
