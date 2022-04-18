@@ -26,7 +26,7 @@ export default function Terminal({ project }) {
                     </code>
             </pre>
             <pre data-prefix=">">
-                <code className="break-all whitespace-normal text-base">
+                <code className="text-base">
                     {project.description}
                 </code>
             </pre>
