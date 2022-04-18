@@ -22,7 +22,7 @@ export default function Terminal({ project }) {
                         text-base 
                         ${LANGUAGE_COLOURS[project.language] ?? 'text-[#e44b23]'}
                     `}>
-                        {project.language ?? 'XML'}
+                        {project.language ?? 'Markdown'}
                     </code>
             </pre>
             <pre data-prefix=">">
