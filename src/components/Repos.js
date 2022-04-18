@@ -4,14 +4,14 @@ import Terminal from "./Terminal";
 export default function Repos(){
     const [projects, setProjects] = useState(null)
 
-    fetch('https://api.github.com/users/devmegan/repos')
+    fetch('https://api.github.com/users/devmegan/repos?sort=pushed&direction=desc')
         .then(response => response.json())
         .then(data => setProjects(data));;
 
     if (!projects){
         return null;
     }
-    
+
     return (
         <div className="p-4 text-lg">
             <div className="sm:hidden grid grid-cols-1 gap-6">
