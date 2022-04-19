@@ -2,20 +2,27 @@ import { useState } from "react";
 import { GITHUB_LINK } from "../Config";
 import CTAbtn from "./LinkBtn";
 import Terminal from "./Terminal";
+const project = {
+    description: 'test project',
+    full_name: 'devmegan/test',
+    html_url: '/test',
+    language: 'Python',
+    name: 'test',
+}
 
 export default function Repos(){
-    const [projects, setProjects] = useState(null)
+    const [projects, setProjects] = useState([project, project, project, project, project, project, project, project, project])
 
-    fetch('https://api.github.com/users/devmegan/repos?sort=pushed&direction=desc')
-        .then(response => response.json())
-        .then(data => setProjects(data));;
+    // fetch('https://api.github.com/users/devmegan/repos?sort=pushed&direction=desc')
+    //     .then(response => response.json())
+    //     .then(data => setProjects(data));;
 
-    if (!projects){
-        return null;
-    }
+    // if (!projects){
+    //     return null;
+    // }
 
     return (
-        <div className="p-4 text-lg">
+        <div className="text-lg" id="projects">
             <div className="sm:hidden grid grid-cols-1 gap-6">
                 {projects.slice(0,4).map((project) =>
                     <Terminal project={project} key={project.name} />
