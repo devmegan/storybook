@@ -1,7 +1,7 @@
 export default function LinkBtn({ chevron, href, rel, target, text}){
     return(
         <a 
-            className="btn hover:btn-accent"
+            className="btn btn-lg hover:btn-accent normal-case"
             href={href}
             target={target}
             rel={rel}
