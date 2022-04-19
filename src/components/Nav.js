@@ -4,7 +4,7 @@ export default function Nav(){
             <div class="flex-1">
                 <a class="btn btn-secondary normal-case text-2xl" href="/">M</a>
             </div>
-            <div class="flex-none hidden md:block">
+            <div class="flex-none hidden sm:block">
                 <ul class="menu menu-horizontal p-0 font-medium">
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#blog">Blog</a></li>
