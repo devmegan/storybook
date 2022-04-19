@@ -20,7 +20,7 @@ export default function Terminal({ project }) {
                 <code 
                     className={`
                         text-base 
-                        ${LANGUAGE_COLOURS[project.language] ?? 'text-[#e44b23]'}
+                        ${LANGUAGE_COLOURS[project.language] ?? 'text-[#ed8469]'}
                     `}>
                         {project.language ?? 'Markdown'}
                     </code>

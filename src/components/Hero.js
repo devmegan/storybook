@@ -3,12 +3,11 @@ import Nav from "./Nav";
 export default function Hero({ content, theme }) {
     return (
         <div 
-            className="p-4 pb-10 text-xl rounded-right-clip bg-base-100 text-base-content"
+            className="text-xl bg-base-100 text-base-content"
             data-theme={theme}
         >
-            <div className="container mx-auto grid">
+            <div className="container mx-auto grid px-2">
                 <Nav />
-                <div className="grid grid-cols-1 lg:grid-cols-2">
                     <div>
                         <h1 className="text-6xl font-bold mb-8 uppercase">{content.header}</h1>
                         <p className="max-w-md">{content.para}</p>
@@ -24,8 +23,13 @@ export default function Hero({ content, theme }) {
                             </button>
                         </div>
                     </div>
+                    
                     {/* <p className='mt-10 font-medium'><span className="text-2xl mr-3">😎</span>Want to see what tech I enjoy working with? Check out my <a className="link link-hover font-semibold underline text-secondary hover:text-secondary-focus" href="https://github.com/devmegan/awesome" target="_blank" rel="noreferrer">awesome list</a>.</p> */}
-                </div>
+            </div>
+            <div className="md:-mt-10 lg:-mt-20 xl:-mt-40">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#d1d5db" fill-opacity="1" d="M0,256L60,234.7C120,213,240,171,360,176C480,181,600,235,720,229.3C840,224,960,160,1080,112C1200,64,1320,32,1380,16L1440,0L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                </svg>
             </div>
         </div>
     )
